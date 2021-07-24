@@ -12,5 +12,5 @@ export class UserdetailsService {
     let url = `${this.API_URL}/v1/users`
     return this.http.post(url, data
     );
-  
+  }
 }

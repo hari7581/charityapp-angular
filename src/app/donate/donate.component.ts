@@ -26,7 +26,7 @@ export class DonateComponent implements OnInit {
   onDelete(i: number) {
     this.details.splice(i, 1);
     this.service.setDonateData(this.details);
-    //this.getTotal(this.details)
+    
 
   }
 
@@ -44,7 +44,7 @@ export class DonateComponent implements OnInit {
   private amountUpdated(amount: number, i: number) {
     this.details[i].amount = amount;
     this.service.setDonateData(this.details)
-   // this.getTotal(this.details)
+   
   }
 
 
