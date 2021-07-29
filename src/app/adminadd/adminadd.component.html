@@ -1,0 +1,26 @@
+<div>
+    <h1>Create requests</h1>
+</div>
+<form>
+    <div class="container" [formGroup]="request">
+        <div class="form-group">
+            <label>Requests</label>
+            <input type="text " formControlName="requests" class="form-control">
+        </div>
+        <div class="form-group">
+            <label>Contactno</label>
+            <input type="phone " formControlName="contactno" class="form-control">
+        </div>
+        <div class="form-group">
+            <label>Amount</label>
+            <input type="phone " formControlName="amount" class="form-control">
+        </div>
+        <div class="form-group">
+            <label>Status</label>
+            <input type="text " formControlName="status" class="form-control">
+        </div>
+    </div>
+    <button class="btn btn-primary" (click)="submit()">Submit</button>
+</form>
+{{request.value| json}}
+

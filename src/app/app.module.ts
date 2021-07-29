@@ -12,14 +12,15 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { DonationsComponent } from './donations/donations.component';
 import { AdminComponent } from './admin/admin.component';
-import { DonateComponent } from './donate/donate.component';
-import { RequestdetailComponent } from './requestdetail/requestdetail.component';
 import { UserdetailsComponent } from './userdetails/userdetails.component';
 import { AdminhomeComponent } from './adminhome/adminhome.component';
 import { AdminheaderComponent } from './adminheader/adminheader.component';
 import { AdminviewComponent } from './adminview/adminview.component';
 import { AdmincreateComponent } from './admincreate/admincreate.component';
 import { AdmindonationComponent } from './admindonation/admindonation.component';
+import { AdminaddComponent } from './adminadd/adminadd.component';
+import { RequestsComponent } from './requests/requests.component';
+import { DonateComponent } from './donate/donate.component';
 
 
 @NgModule({
@@ -32,14 +33,16 @@ import { AdmindonationComponent } from './admindonation/admindonation.component'
     FooterComponent,
     DonationsComponent,
     AdminComponent,
-    DonateComponent,
-    RequestdetailComponent,
     UserdetailsComponent,
     AdminhomeComponent,
     AdminheaderComponent,
     AdminviewComponent,
     AdmincreateComponent,
     AdmindonationComponent,
+    AdminaddComponent,
+    RequestsComponent,
+    DonateComponent,
+  
     
     
   ],

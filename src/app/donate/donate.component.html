@@ -1,45 +1,43 @@
 <app-header></app-header>
-<!-- <div class="empty" *ngIf = "items.length > 1">
-    <div class="info">
-        <h4>You Don't have any items in your cart.</h4>
-        <a routerLink = "../home" class="btn btn-success">Start Shopping</a>
-    </div> -->
-    <!-- {{items | json}} -->
-    <!-- <div *ngIf="items.length > 0" > -->
-    <!-- <div class="col-sm-3" *ngFor="let meals of items">
-        <h3>{{meals.name}}</h3>
-        <h3>{{meals.price}}</h3>
-    </div> -->
-    <!-- </div> -->
-    <div class="requestdetail-container">
-        <div class="reqdetail-header">
-        <h5 class="reqdetail-title">Name</h5>
-        <h5 class="contactdetail">contact detail</h5>
-        <h5 class= "amount">amount</h5>
-        
-        </div>
-        </div>
-    
-    <div *ngIf="details.length > 0" >
-        <div class="cart" *ngFor = "let detail of details; let i = index">
-            <i class = "fa fa-trash" aria-hidden="true" (click)="onDelete(i)"></i>
-            <div class="name">
-               <h3>{{detail.name}}</h3>
-                </div>
-                <div class="contactdetail">
-                    {{detail.contactdetail}}
-                </div>
-                <input type = "number" class="amount" [value] = "detail.amount"
-                (blur)="validateInput($event,i)">
-                <div class="subtotal">
-                    {{ detail.amount | currency}}
-
-                </div>
-               
-        </div>
-        <div class="checkout">
-            <!-- <div>Total</div>
-            <b>{{total | currency}}</b> -->
-            <button class="btn btn-success" (click)="adddonates()">submit</button>
-        </div>
+<div class="requests-container">
+    <div class="request-header">
+        <h5 class="request-title">Requests</h5>
+        <h5 class="contactno">Contactno</h5>
+        <h5 class="amount">Amount</h5>
+        <h5 class="status">Status</h5>
+        <h5 class="donate">Donate</h5>
     </div>
+</div>
+<div *ngIf="details.length > 0">
+    <div class="donate" *ngFor="let detail of details; let i = index">
+        <i class="fa fa-trash" aria-hidden="true" (click)="onDelete(i)"></i>
+        <div class="requests">
+            <h3>{{detail.requests}}</h3>
+        </div>
+        <div class="contactno">
+            {{detail.contactno}}
+        </div>
+       
+        <div class="amount">
+            {{detail.amount}}
+        </div>
+        <div class="status">
+            {{detail.status}}
+        </div>
+
+        <!-- <input type="number">
+        <div class="donate">
+            {{detail.donate | currency}}
+        </div> -->
+
+     </div>
+     <div class="donate">
+        <div>donate</div>
+        <b>{{donate | currency}}</b>
+        <button class="btn btn-success">Ordder</button>
+    
+</div>
+
+
+
+<app-footer></app-footer>

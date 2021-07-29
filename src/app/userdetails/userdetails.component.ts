@@ -9,12 +9,14 @@ import {RegisterService} from '../register.service'
 export class UserdetailsComponent implements OnInit {
 
   constructor(private service:RegisterService) { }
-  userform:any
+  AllUsers:any;
   ngOnInit(): void {
-    console.log(this.userform.value)
-    this.service.addUser(this.userform.value).subscribe((res)=>{
-     
-    });
+    // console.log(this.service.addUser(data));
+    // this.service.addUser(data).subscribe((res:any)=>{
+
+    // });
+  
+    
   }
 
 }

@@ -1,4 +1,37 @@
 <app-adminheader></app-adminheader>
-
-
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Requests</th>
+        <th scope="col">Contactno</th>
+        <th scope="col">Amount</th>
+        <th scope="col">Status</th>
+      </tr>
+    </thead>
+    <tbody *ngFor= "let requests of AllRequests;let i = index">
+      <tr>
+        <th scope="row">{{i+1}}</th>
+        <td><label *ngIf="!requests.update">{{requests.requests}}</label>
+          <input type="text" *ngIf="requests.update" [(ngModel)]="requests.requests">
+        </td>
+        <td><label *ngIf="!requests.update">{{requests.contactno}}</label>
+          <input type="text" *ngIf="requests.update" [(ngModel)]="requests.contactno">
+        </td>
+        <td><label  *ngIf="!requests.update">{{requests.amount}}</label>
+          <input type="text" *ngIf="requests.update" [(ngModel)]="requests.amount">
+        </td>
+        <td><label  *ngIf="!requests.update">{{requests.status}}</label>
+          <input type="text" *ngIf="requests.update"[(ngModel)]="requests.status"> 
+        </td>
+        <td>
+          <button class="btn btn-warning"  *ngIf="!requests.update" (click)="update(requests)">Update</button>
+          <button class="btn btn-success"  *ngIf="requests.update" (click)="save(requests)">save</button>
+        </td>
+        
+      </tr> 
+      
+    </tbody>
+  </table>
+<button class="btn btn-primary " (click)="add()">Add requests</button>
 <app-footer></app-footer>
