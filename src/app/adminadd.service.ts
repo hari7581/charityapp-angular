@@ -3,6 +3,7 @@ import { environment } from 'src/environments/environment.prod';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs/internal/Observable';
 import { error } from '@angular/compiler/src/util';
+import { RequestsComponent } from 'src/app/requests/requests.component';
 
 
 @Injectable({
@@ -23,7 +24,7 @@ export class AdminaddService {
     );
   }
   updateRequestDetails(_id:any,_rev:any){
-    let url = `${this.API_URL}/v1/requests/${_id}?rev=${_rev}`
+    let url = `${this.API_URL}/v1/requests/+${_id}+?rev=+${_rev}`
     return this.http.put(url,_id,_rev
     );
   }

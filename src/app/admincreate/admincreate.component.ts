@@ -24,16 +24,16 @@ export class AdmincreateComponent implements OnInit {
 
   }
 
-  update(requests:any) {
+  update(requests: any) {
     requests.update = true;
-    console.log(requests)    
+    console.log(requests)
   }
 
-  save(requests:any) {
+  save(requests: any) {
     // console.log(request)
     requests.update = false;
-    this.service.updateRequestDetails(requests._id,requests._rev).subscribe((res:any)=>{
-    console.log(res)
+    this.service.updateRequestDetails(requests._id, requests._rev).subscribe((res: any) => {
+      console.log(res)
     })
   }
 

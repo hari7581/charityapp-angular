@@ -13,16 +13,16 @@
       <tr>
         <th scope="row">{{i+1}}</th>
         <td><label *ngIf="!requests.update">{{requests.requests}}</label>
-          <input type="text" *ngIf="requests.update" [(ngModel)]="requests.requests">
+          <input name="requests.requests" type="text" *ngIf="requests.update" [(ngModel)]="requests.requests"    >
         </td>
         <td><label *ngIf="!requests.update">{{requests.contactno}}</label>
-          <input type="text" *ngIf="requests.update" [(ngModel)]="requests.contactno">
-        </td>
+          <input name="requests.contactno" type="text" *ngIf="requests.update" [(ngModel)]="requests.contactno"  > 
+                </td>
         <td><label  *ngIf="!requests.update">{{requests.amount}}</label>
-          <input type="text" *ngIf="requests.update" [(ngModel)]="requests.amount">
+          <input name="requests.amount" type="text" *ngIf="requests.update" [(ngModel)]="requests.amount"      >
         </td>
         <td><label  *ngIf="!requests.update">{{requests.status}}</label>
-          <input type="text" *ngIf="requests.update"[(ngModel)]="requests.status"> 
+          <input name="requests.status" ntype="text" *ngIf="requests.update"[(ngModel)]="requests.status"  > 
         </td>
         <td>
           <button class="btn btn-warning"  *ngIf="!requests.update" (click)="update(requests)">Update</button>

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AdminaddService } from '../adminadd.service';
-import { FormGroup, FormControl } from '@angular/forms';
+import { FormGroup, FormControl,FormArray } from '@angular/forms';
 
 @Component({
   selector: 'app-adminadd',
