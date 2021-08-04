@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AdminaddService } from '../adminadd.service';
+ import { RequestsComponent } from 'src/app/requests/requests.component';
+
 
 
 @Component({
@@ -25,19 +27,25 @@ export class AdmincreateComponent implements OnInit {
   }
 
   update(requests: any) {
-    requests.update = true;
+   requests.update = true;
     console.log(requests)
   }
 
-  save(requests: any) {
+  save(request:any) {
     // console.log(request)
-    requests.update = false;
-    this.service.updateRequestDetails(requests._id, requests._rev).subscribe((res: any) => {
+     request.update = false;
+    this.service.updateRequestDetails(request._id,request._rev,request).subscribe((res: any) => {
       console.log(res)
     })
   }
-
-
+  delete(requests:any){
+    console.log(requests)
+    requests.update = false;
+    this.service.deleterequests(requests._id,requests._rev).subscribe((res:any)=>{
+      console.log(res)
+    })
+  }
+  
   add() {
 
     this.route.navigate(['../adminadd'])

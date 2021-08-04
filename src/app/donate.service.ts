@@ -11,6 +11,11 @@ export class DonateService {
 API_URL = environment.API_URL;
   constructor(private http:HttpClient) { }
 
+addDonate(donate:any){
+  let url = `${this.API_URL}/v1/donations`
+  return this.http.post(url, donate
+  );
+}
   getAllUsers() {
     let url = `${this.API_URL}/v1/users`
     return this.http.get(url);
@@ -29,7 +34,7 @@ API_URL = environment.API_URL;
   }
 
   setDonateData(data: any) {
-    localStorage.setDetail('cart', JSON.stringify(data));
+    localStorage.setDetail('donate', JSON.stringify(data));
     this.donateDetails.next(this.getDonateData());
   }
   getDonateData() {

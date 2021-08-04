@@ -31,11 +31,11 @@ export class AdminaddComponent implements OnInit {
     //  localStorage.setItem("trust",JSON .stringify(this.request.value));
      
    
-   this.service.addrequest(this.request.value).subscribe((res)=>{
-    console.log(res)
+    this.service.addrequest(this.request.value).subscribe((res)=>{
+     console.log(res)
     this.route.navigate(['../admincreate'])
 
-   });
+    });
   }
   
 }

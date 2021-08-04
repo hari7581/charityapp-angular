@@ -13,20 +13,21 @@
       <tr>
         <th scope="row">{{i+1}}</th>
         <td><label *ngIf="!requests.update">{{requests.requests}}</label>
-          <input name="requests.requests" type="text" *ngIf="requests.update" [(ngModel)]="requests.requests"    >
+          <input name="requests.requests" type="text" *ngIf="requests.update" [(ngModel)]="requests.requests"   required>
         </td>
         <td><label *ngIf="!requests.update">{{requests.contactno}}</label>
-          <input name="requests.contactno" type="text" *ngIf="requests.update" [(ngModel)]="requests.contactno"  > 
+          <input name="requests.contactno" type="text" *ngIf="requests.update" [(ngModel)]="requests.contactno"  required > 
                 </td>
         <td><label  *ngIf="!requests.update">{{requests.amount}}</label>
-          <input name="requests.amount" type="text" *ngIf="requests.update" [(ngModel)]="requests.amount"      >
+          <input name="requests.amount" type="text" *ngIf="requests.update" [(ngModel)]="requests.amount"   required >
         </td>
         <td><label  *ngIf="!requests.update">{{requests.status}}</label>
-          <input name="requests.status" ntype="text" *ngIf="requests.update"[(ngModel)]="requests.status"  > 
+          <input name="requests.status" ntype="text" *ngIf="requests.update"[(ngModel)]="requests.status" required > 
         </td>
         <td>
           <button class="btn btn-warning"  *ngIf="!requests.update" (click)="update(requests)">Update</button>
-          <button class="btn btn-success"  *ngIf="requests.update" (click)="save(requests)">save</button>
+          <button class="btn btn-success"  *ngIf="requests.update" (click)="save(requests)">save</button>&nbsp;
+          <button class="btn btn-danger"  *ngIf="!requests.update" (click)="delete(requests)">Delete</button>
         </td>
         
       </tr> 

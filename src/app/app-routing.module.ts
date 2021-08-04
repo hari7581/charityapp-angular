@@ -13,7 +13,7 @@ import { AdminheaderComponent } from './adminheader/adminheader.component';
 import { AdminviewComponent} from './adminview/adminview.component';
 import { AdmincreateComponent} from './admincreate/admincreate.component';
 import { AdmindonationComponent } from './admindonation/admindonation.component';
-import { AdminaddComponent } from './adminadd/adminadd.component';
+import { AdminaddComponent } from './adminadd/adminadd.component';   
   
 const routes: Routes = [
   {path:"login",component:LoginComponent},

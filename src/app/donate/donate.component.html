@@ -1,4 +1,33 @@
-<app-header></app-header>
+ <app-header></app-header>
+ <table class="table">
+    <thead class="requests-container">
+      <tr class="request-header">
+          <th scope="col">#</th>
+        <th scope="col" class="request-title">requests</th>
+        <th scope="col" class="contactno">contactno</th>
+        <th scope="col" class="amount">amount</th>
+        <th scope="col" class="status">status</th>
+        <th scope="col" class="donate">donate</th>        
+      </tr>
+    </thead>
+    <tbody *ngIf="details.length>0" >
+      <tr class="donate" *ngFor="let detail of details;let i= index">
+          <i class="fa-fa-trash" aria-hidden="true" (click)="onDelete(i)"></i>
+        <th class="requests">{{i}}</th>
+        <td class="contactno">{{detail.requests}}</td>
+        <td class="contactno">{{detail.contactno}}</td>
+        <td class="amount">{{detail.amount | currency}}</td>
+        <td class="status">{{detail.status}}</td>
+        <td class="donate"><label>donate</label>
+        <input type="number" placeholder="enter the amount"></td>
+      </tr>
+      <button class="btn btn-success" (click)="addDonate">Donate</button>
+      
+     
+    </tbody>
+  </table>
+
+<!-- 
 <div class="requests-container">
     <div class="request-header">
         <h5 class="request-title">Requests</h5>
@@ -7,8 +36,9 @@
         <h5 class="status">Status</h5>
         <h5 class="donate">Donate</h5>
     </div>
-</div>
-<div *ngIf="details.length > 0">
+</div> -->
+
+<!-- <div *ngIf="details.length > 0">
     <div class="donate" *ngFor="let detail of details; let i = index">
         <i class="fa fa-trash" aria-hidden="true" (click)="onDelete(i)"></i>
         <div class="requests">
@@ -30,14 +60,15 @@
             {{detail.donate | currency}}
         </div> -->
 
-     </div>
+     <!-- </div>
      <div class="donate">
-        <div>donate</div>
+        <div><label>donate</label>
+        <input type="number" name="donate"></div>
         <b>{{donate | currency}}</b>
         <button class="btn btn-success">Ordder</button>
     
-</div>
+</div> -->
 
-
+ 
 
 <app-footer></app-footer>
